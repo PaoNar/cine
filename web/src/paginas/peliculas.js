@@ -28,7 +28,12 @@ class Movies extends Component {
         console.log(error)
       })
   }
-
+  putData = (value) => {
+    axios.delete(`${API}?id=${value}`, {
+      data: { id: value }
+    })
+    window.location.assign("http://localhost:3000/movies");
+  }
   deleteData = (value) => {
     axios.delete(`${API}?id=${value}`, {
       data: { id: value }
@@ -36,6 +41,7 @@ class Movies extends Component {
     window.location.assign("http://localhost:3000/movies");
   }
 
+  
   render() {
     const { peliculas } = this.state
     
@@ -54,32 +60,32 @@ class Movies extends Component {
               <article className="overflow-hidden    shadow-lg h-auto  w-full " key={element.id}>
               
 
-                <a href="#">
+                <a  href=".">
                   <img alt="Placeholder" className="block h-auto w-full" src={element.imagen} ></img>
                 </a>
 
                 <header className="flex items-center justify-between leading-tight  md:p-1">
                   <h1 className="text-lg">
-                    <a className="text-black  text-xl mb-2">Titulo: {element.titulo}</a>
+                    <a className="text-black  text-xl mb-2"  href=".">Titulo: {element.titulo}</a>
                              
                   </h1>
-                  <a className="text-black  text-xl mb-2">Valor: {element.valorBoleto}</a>
+                  <a className="text-black  text-xl mb-2" href=".">Valor: {element.valorBoleto}</a>
 
                       
 
                 </header>
                 <div className="flex items-center justify-between leading-none p-2 md:p-4">
-                  <a className="text-black  text-xl mb-2">Género: {element.categoria}</a>
+                  <a className="text-black  text-xl mb-2"  href=".">Género: {element.categoria}</a>
                  
                 </div>
                 <div className="flex items-center justify-between leading-none p-2 md:p-4">
-                  <a className="text-black  text-xl mb-2">Sinopsis: {element.resumen}</a>
+                  <a className="text-black  text-xl mb-2"  href=".">Sinopsis: {element.resumen}</a>
 
 
                 </div>
 
                 <div className="m-3">
-                  <button className="bg-green-400   hover:text-white hover:bg-green-700 font-roboto py-2 px-4 ">
+                  <button className="bg-green-400   hover:text-white hover:bg-green-700 font-roboto py-2 px-4 " onClick={()=>this.updateData(element.id)}>
                                             
                     <span className="mr-2">Actualizar</span>
                   </button>

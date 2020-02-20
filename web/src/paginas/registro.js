@@ -52,9 +52,10 @@ class Register extends Component {
                       {/* <!-- Row --> */}
                       <div className="w-full xl:w-3/4 lg:w-11/12 flex">
                         {/* <!-- Col --> */}
-                        <a className="p-1" >
-                                <img alt="Placeholder" className="block h-full w-screen" src="https://picsum.photos/600/400/?random"></img>
-                              </a>
+                        <div className="p-1">
+                        <img alt="Placeholder" className="block h-full w-screen" src="https://picsum.photos/600/400/?random"/>
+                        </div>
+                 
                       </div>
                         {/* <!-- Col --> */}
                         <div className="w-full lg:w-1/2 bg-white p-5 rounded-lg lg:rounded-l-none">

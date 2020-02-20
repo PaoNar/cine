@@ -45,7 +45,7 @@ class Login extends Component {
                       {/* <!-- Row --> */}
                       <div className="w-full xl:w-3/4 lg:w-11/12 flex">
                         {/* <!-- Col --> */}
-                        <a className="p-1" href="#">
+                        <a className="p-1" href=".">
                                 <img alt="Placeholder" className="block h-full w-screen" src={foto}></img>
                               </a>
                       </div>

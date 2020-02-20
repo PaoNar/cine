@@ -13,7 +13,7 @@ import Salas from './paginas/salas';
 import Horarios from './paginas/horarios';
 import Films from './paginas/film';
 import FilmsRoomAdd from './paginas/addFilm';
-
+import Report from './paginas/report';
 
 
 
@@ -28,7 +28,8 @@ import FilmsRoomAdd from './paginas/addFilm';
             <Route path="/rooms" component={ Salas } />
             <Route path="/schedules" component={Horarios} />  
            <Route path="/films_room" component={ Films } />
-           <Route path="/films_room_add" component={ FilmsRoomAdd } />
+             <Route path="/films_room_add" component={FilmsRoomAdd} />
+              <Route path="/report" component={ Report } />
 
         </Switch>
     </Router>,

@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Navega from '../navegacion/navigation';
 import Salir from '../navegacion/salir';
-import ImageBase64 from 'image-to-base64';
+// import ImageBase64 from 'image-to-base64';
 
 import '../styles/tailwind.css';
 
@@ -99,7 +99,7 @@ class Nuevapeli extends Component {
               <div className="flex flex-wrap -mx-1 lg:-mx-4 ">
                   <div className="my-1 px-1 w-full md:w-3/3 lg:my-4 lg:px-4 lg:w-1/3 mx-auto">
                           <form className="flex mx-auto  flex-wrap items-center justify-between leading-tight p-2 md:p-4 " onSubmit={ this.saveData }>
-                              <a className="p-1" >
+                              <a className="p-1" href="/" >
                               <input type='file' onChange={this.onFileChange} ></input>
                               </a>
                               <div className="text-lg">
@@ -123,7 +123,7 @@ class Nuevapeli extends Component {
                                     </label>
                                       <div className="relative">
 
-                                        <a>
+                                        
                                           <select className="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded" 
                                             type="text"
                                             name="categoria"
@@ -131,13 +131,14 @@ class Nuevapeli extends Component {
                                             onChange={ this.changeHandler } 
                                           
                                           >
-                                          <option>Terror</option>
+                                          <option>seleccionar</option>
                                           <option>Suspenso</option>
                                           <option>Romance</option>
                                           <option>Animadas</option>
+                                          <option>Animadas</option>
                                         
                                         </select>
-                                      </a>
+                                      
                                         <div className="pointer-events-none absolute pin-y pin-r flex items-center px-2 text-grey-darker">
                                           <svg className="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
                                         </div>
